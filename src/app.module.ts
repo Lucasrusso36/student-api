@@ -5,6 +5,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { AppService } from './app.service';
 import { StudentsModule } from './modules/students/students.module';
+import { DisciplinesModule } from './modules/disciplines/disciplines.module';
+import { LessonsModule } from './modules/lessons/lessons.module';
+import { ContentsModule } from './modules/contents/contents.module';
 
 @Module({
   imports: [
@@ -24,6 +27,9 @@ import { StudentsModule } from './modules/students/students.module';
       synchronize: true,
     }),
     StudentsModule,
+    DisciplinesModule,
+    LessonsModule,
+    ContentsModule,
   ],
   providers: [AppService],
 })
