@@ -10,7 +10,7 @@ import { AppService } from './app.service';
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       sortSchema: true,
     }),
-    TypeOrmModule.forRoot()
+    TypeOrmModule.forRoot(),
   ],
   providers: [AppService],
 })
